@@ -10,11 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_11_234016) do
+ActiveRecord::Schema.define(version: 2019_02_14_000017) do
+
+  create_table "departments", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "majors", force: :cascade do |t|
     t.string "name"
-    t.string "department"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
